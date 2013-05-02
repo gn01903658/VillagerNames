@@ -108,6 +108,7 @@ public class VillagerNames extends JavaPlugin implements Listener {
 									case 2: currentProfession = "priest"; break;
 									case 3: currentProfession = "blacksmith"; break;
 									case 4: currentProfession = "butcher"; break;
+									default: currentProfession = "other"; break;
 									}
 								}
 
@@ -212,6 +213,9 @@ public class VillagerNames extends JavaPlugin implements Listener {
 				// If profession == BUTCHER
 				} else if (currentProfession.getId() == 4){
 					professionConfig = "butcher";
+				// If profession is unknown
+				} else {
+					professionConfig = "other";
 				}
 				
 				// Load the FARMER names out of config.yml into a List
